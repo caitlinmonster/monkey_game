@@ -24,7 +24,6 @@
 		}
 
 		//on click for "Monkey"
-		$('button.monkey').addEventListener("submit");
 			
 
 		$(function() {
