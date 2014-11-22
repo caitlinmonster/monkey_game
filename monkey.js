@@ -24,6 +24,7 @@
 		}
 
 		//on click for "Monkey"
+		//WHY CAN'T I MAKE THIS WORK
 			
 
 		$(function() {
