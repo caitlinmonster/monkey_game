@@ -1,0 +1,275 @@
+@charset "UTF-8";
+
+
+
+
+/* LAYOUT */
+
+body {
+	background-color:#52360D	;
+	font-family: 'Titillium Web', sans-serif;
+	padding: 0px;
+	margin: 0px;
+}
+
+#content_wrapper {
+	width: 90%;
+	margin: 0px auto;
+}
+
+/* header div */
+#welcome {
+	width:100%;
+	padding: 30px;
+	height: 100px;
+	background: #6B9B82;
+	margin: 0px;
+}
+
+.welcome_content {
+	width: 90%;
+	margin: 0px auto;
+}
+
+
+/* TEXT */
+h1 {
+	font-size: 50px;
+	font-family: 'Patua One', cursive;
+	color: #52360D;
+}
+
+/* CONTENT */
+.card_front {
+	width: 250px;
+	height: 250px;
+	float: left;
+	margin: 25px;
+	background: #E9A33A;
+	border-radius: 20px;
+}
+
+.card_back {
+	width: 250px;
+	height: 250px;
+	float: left;
+	margin: 25px;
+	background: #6B9B82;
+	border-radius: 20px;
+}
+
+.opacity {
+	opacity: 0.8;
+    filter: alpha(opacity=80); /* For IE8 and earlier */;
+	position: relative; 
+	top:0px;
+	left:0px;
+	width: 250px;
+	height: 250px;
+	background: #E9A33A;
+	border-radius: 20px;
+	}
+
+/*BUTTONS*/
+
+.button {
+	height: 50px;
+	width: 200px;
+	border: 0px;
+	border-radius: 10px;
+	background-color: #52360D;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 20px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #fff;
+	padding: 10px;
+	margin: 20px auto;
+	position: absolute;
+}
+
+.monkey {
+	top: 80px;
+	left: 50px;
+}
+
+.button:hover {
+	background-color: #6B9B82;
+}
+
+.not_a_monkey {
+	top: 150px;
+	left: 50px;
+}
+
+/* CSS CARD FLIP ANIMATION */
+/* entire container, keeps perspective */
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 280px;
+	height: 280px;
+	float: left;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+
+.reverse 	{
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+	top:0px;
+	left:0px;
+	width: 250px;
+	height: 250px;
+	border-radius: 20px;
+}
+
+/* MONKEYS */
+.wolfs_monkey {
+	background-image: url(images/wolfs_mona_monkey.jpg);
+}
+
+.debrazzas {
+	background-image: url(images/debrazzas.jpg);
+}
+
+.common_squirrel_monkey {
+	background-image: url(images/common_squrrel_monkey.jpg);
+}
+
+.blackcap_squirrel_monkey {
+	background-image: url(images/blackcap_squirrel_monkey.jpg);
+}
+
+.barbary {
+	background-image: url(images/barbary.jpg);
+}
+
+.amazon_monkey {
+	background-image: url(images/amazon_monkey.jpg);
+}
+
+.brown_woolly {
+	background-image: url(images/brown_woolly.jpg);
+
+}
+
+.proboscis {
+	background-image: url(images/proboscis.jpg);
+
+}
+
+.spider_monkey {
+	background-image: url(images/spider_monkey.jpg);
+
+}	
+
+.langur {
+	background-image: url(images/langur.jpg);
+
+}	
+
+.patas {
+	background-image: url(images/patas.jpg);
+
+}	
+
+.snubnosed_monkey {
+	background-image: url(images/subnosed_monkey.jpg);
+
+}
+
+.pygmy {
+	background-image: url(images/pygmy.jpg);
+
+}
+
+/* APES */
+.bonobo {
+	background-image: url(images/bonobo.jpg);
+}
+
+.chimp {
+	background-image: url(images/chimp.jpg);
+}
+
+.orangutan {
+	background-image: url(images/orangutan.jpg);
+
+}
+
+.gorilla {
+	background-image: url(images/gorilla.jpg);
+
+}
+
+.gibbon {
+	background-image: url(images/gibbon.jpg);
+
+}
+
+
+/* PROSIMIANS */
+.tarsier {
+	background-image: url(images/tarsier.jpg);
+}
+
+.ringtailed_lemur {
+	background-image: url(images/ring_tailed_lemur.jpg);
+}
+
+.slow_loris {
+		background-image: url(images/slow_loris.jpg);
+
+}
+
+.tarsier {
+		background-image: url(images/tarsier.jpg);
+
+}
+
+.galago {
+		background-image: url(images/galago.jpg);
+
+}
+
+.potto {
+		background-image: url(images/potto.jpg);
+
+}
