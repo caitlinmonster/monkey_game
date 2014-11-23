@@ -1,5 +1,5 @@
 function create_card_listener($card, i) {
-		$('#content_wrapper').append($card);
+		$('#game').append($card);
 		$card.find('input').on('click', function(){
 			console.log(i-1);
 			console.log(primates[i-1]);
@@ -9,9 +9,10 @@ function create_card_listener($card, i) {
 
 	}
 
+
+
 	$(document).ready(function() {
 		
-
 		//array shuffle
 		function shuffle(primates) {
 	  	var currentIndex = primates.length, temporaryValue, randomIndex ;
@@ -41,11 +42,12 @@ function create_card_listener($card, i) {
 			shuffle(primates);
 			console.log(primates);
 
-			//create loop	
+			//create loop to pull from array for cards
 		    for (var i = 0; i < primates.length; i++) {
 			
-			    //create a card
-			    var $card = $(					"<div class='flip-container "+
+			    //create a card from array for game
+			    var $card = $(					
+			    		"<div class='flip-container "+
 						primates[i].type+
 						"' "+ 
 						"ontouchstart='this.classList.toggle"+
@@ -76,7 +78,6 @@ function create_card_listener($card, i) {
 
 			    //add card to page
 			    create_card_listener($card, i)
-
 			} 
 
 		});

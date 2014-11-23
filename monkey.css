@@ -12,9 +12,27 @@ body {
 	margin: 0px;
 }
 
+nav {
+	float: right;
+	padding: 30px;
+	vertical-align: bottom;
+	margin-top: 38px;
+
+}
+
+
 #content_wrapper {
 	width: 90%;
 	margin: 0px auto;
+	max-width: 1570px;
+}
+
+#game {
+	margin: 0px;
+}
+
+#monkey_info {
+	margin: 0px;
 }
 
 /* header div */
@@ -24,6 +42,8 @@ body {
 	height: 100px;
 	background: #6B9B82;
 	margin: 0px;
+	margin-bottom: 15px;
+	position: relative;
 }
 
 .welcome_content {
@@ -31,12 +51,41 @@ body {
 	margin: 0px auto;
 }
 
+.info {
+	width: 50%;
+	height: 400px;
+	margin: 40px 25px;
+	background: #E9A33A;
+	border-radius: 20px;
+}
 
 /* TEXT */
 h1 {
 	font-size: 50px;
-	font-family: 'Patua One', cursive;
+	font-family: 'Patua One', sans-serif;
 	color: #52360D;
+	float: left;
+}
+
+nav a {
+	font-size: 20px;
+	margin: 15px;
+	font-weight: 700;
+	color: #52360D;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+nav a:active {
+	color: #E9A33A;
+}
+
+nav a:hover {
+	color: #E9A33A;
+}
+
+nav a:visited {
+	color: 52360D;
 }
 
 /* CONTENT */
