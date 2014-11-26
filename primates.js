@@ -10,7 +10,8 @@ var primates = [
 		habitat:"Humid and mature tropical forests",	
 		location:"South America",	
 		branch:"New World",	
-		image:"images/brown_woolly.jpg"
+		image:"images/brown_woolly.jpg",
+		monkey:"true"
 	},
 
 	{
@@ -23,7 +24,8 @@ var primates = [
 		habitat:"Lowland rainforest and swamp forest",
 		location:"Central Africa",	
 		branch:"Old World",	
-		image:"images/wolfs_mona_monkey.jpg"
+		image:"images/wolfs_mona_monkey.jpg",
+		monkey:"true"
 	},
 	{
 		name:"Proboscis Monkey", 
@@ -35,7 +37,8 @@ var primates = [
 		habitat:"Dipterocarp, mangrove and riverine forests. It can also be found in swamp forests",
 		location:"Borneo",	
 		branch:"Old World",
-		image:"images/proboscis.jpg"
+		image:"images/proboscis.jpg",
+		monkey:"true"
 	},
 	{
 		name:"Barbary Macaque", 
@@ -47,7 +50,8 @@ var primates = [
 		habitat:"Wooded Forests, scrubs, or rocky ridges full of vegetation",
 		location:"North West Africa",	
 		branch:"Old World",
-		image:"images/barbary.jpg"
+		image:"images/barbary.jpg",
+		monkey:"true"
 	},
 	{
 		name:"Bonobo",
@@ -59,7 +63,8 @@ var primates = [
 		habitat:"Lowland jungle and swamp forests",
 		location:"Central Africa",	
 		branch:"Greater Ape",
-		image:"images/bonobo.jpg"
+		image:"images/bonobo.jpg",
+		monkey:"false"
 	},
 	{
 		name:"Chimpanzee", 
@@ -71,7 +76,8 @@ var primates = [
 		habitat:"Rain forests and wet savannas",
 		location:"Central Africa",	
 		branch:"Greater Ape",
-		image:"images/chimp.jpg"
+		image:"images/chimp.jpg",
+		monkey:"false"
 	},
 	{
 		name:"De Brazza's Monkey", 
@@ -83,7 +89,8 @@ var primates = [
 		habitat:"Areboreal swamps and dry mountain forests",
 		location:"Central Africa",	
 		branch:"Old World",
-		image:"images/debrazzas.jpg"
+		image:"images/debrazzas.jpg",
+		monkey:"true"
 	},
 	{
 		name:"Common Squirrel Monkey",
@@ -95,7 +102,8 @@ var primates = [
 		habitat:"Tropical rainforest",
 		location:"South America",	
 		branch:"New World",
-		image:"images/common_squrrel_monkey.jpg"
+		image:"images/common_squrrel_monkey.jpg",
+		monkey:"true"
 	},
 	{
 		name:"Spider Monkey", 
@@ -107,7 +115,8 @@ var primates = [
 		habitat:"Tropical jungle and rainforest",
 		location:"South America",	
 		branch:"Old World",
-		image:"images/spider_monkey.jpg"
+		image:"images/spider_monkey.jpg",
+		monkey:"true"
 	},
 	{
 		name:"Langur Monkey",
@@ -118,7 +127,8 @@ var primates = [
 		habitat:"Wooded and Urban areas",
 		location:"South Asia",	
 		branch:"Old World",
-		image:"images/langur.jpg"
+		image:"images/langur.jpg",
+		monkey:"true"
 	},
 	{
 		name:"Amazon Monkey", 
@@ -130,7 +140,8 @@ var primates = [
 		habitat:"Dense, tropical jungle close to a stream",
 		location:"Central and South America",	
 		branch:"New World",
-		image:"images/amazon_monkey.jpg"
+		image:"images/amazon_monkey.jpg",
+		monkey:"true"
 	},
 	{
 		name:"Patas Monkey", 
@@ -142,7 +153,8 @@ var primates = [
 		habitat:"Savanna and open woodland",
 		location:"West/East Africa",	
 		branch:"Old World",
-		image:"images/patas.jpg"
+		image:"images/patas.jpg",
+		monkey:"true"
 	},
 	{
 		name:"Golden Snubnosed Monkey", 
@@ -154,7 +166,8 @@ var primates = [
 		habitat:"Forested Mountains",
 		location:"Central and South West China",	
 		branch:"Old World",
-		image:"images/subnosed_monkey.jpg"
+		image:"images/subnosed_monkey.jpg",
+		monkey:"true"
 	},	
 	{
 		name:"Ringtailed Lemur",
@@ -166,7 +179,8 @@ var primates = [
 		habitat:"Gallery Forests",
 		location:"Madagascar",	
 		branch:"Old World",
-		image:"images/ringtailed_lemur.jpg"
+		image:"images/ringtailed_lemur.jpg",
+		monkey:"false"
 	},
 	{
 		name:"Slow Loris", 
@@ -178,7 +192,8 @@ var primates = [
 		habitat:"Tropical Forest and Bamboo groves",
 		location:"South and Southeast Asia",	
 		branch:"Old World",
-		image:"images/slow_loris.jpg"
+		image:"images/slow_loris.jpg",
+		monkey:"false"
 	},
 	{
 		name:"Bushbaby", 
@@ -190,7 +205,8 @@ var primates = [
 		habitat:"Woodlands and bushland",
 		location:"East Africa/Sub-Saharan",	
 		branch:"Old World",
-		image:"images/galago.jpg"
+		image:"images/galago.jpg",
+		monkey:"false"
 	},
 	{
 		name:"Tarsier", 
@@ -202,7 +218,8 @@ var primates = [
 		habitat:"Forests, mangroves and scrub",
 		location:"South-east Asian islands",	
 		branch:"Old World",
-		image:"images/tarsier.jpg"
+		image:"images/tarsier.jpg",
+		monkey:"false"
 	},
 	{
 		name:"Pygmy Marmoset",
@@ -214,7 +231,8 @@ var primates = [
 		habitat:"Rainforests",
 		location:"South America",	
 		branch:"New World",
-		image:"images/marmoset.jpg"
+		image:"images/marmoset.jpg",
+		monkey:"false"
 	},
 	{
 		name:"Orangutan", 
@@ -226,7 +244,8 @@ var primates = [
 		habitat:"Rainforests",
 		location:"Indonesia and Malaysia",	
 		branch:"Old World",
-		image:"images/orangutan.jpg"
+		image:"images/orangutan.jpg",
+		monkey:"false"
 	},
 	{
 		name:"Gorilla", 
@@ -238,7 +257,8 @@ var primates = [
 		habitat:"Dense forests and lowland swamps and marshes",
 		location:"Central West African and The Democratic Republic of the Congo",	
 		branch:"Greater Ape",
-		image:"images/gorilla.jpg"
+		image:"images/gorilla.jpg",
+		monkey:"false"
 	},
 	{
 		name:"Gibbon", 
@@ -250,7 +270,8 @@ var primates = [
 		habitat:"Tropical and subtropical rainforests",
 		location:"India to Indonesia and China",	
 		branch:"Old World",
-		image:"images/gibbon.jpg"
+		image:"images/gibbon.jpg",
+		monkey:"false"
 	},
 	{
 		name:"Black Cap", 
@@ -262,7 +283,8 @@ var primates = [
 		habitat:"Dense tropical jungle close to a stream",
 		location:"South America",	
 		branch:"New World",
-		image:"images/blackcap_squirrel_monkey.jpg"
+		image:"images/blackcap_squirrel_monkey.jpg",
+		monkey:"true"
 	},
 	{
 		name:"Potto", 
@@ -274,7 +296,8 @@ var primates = [
 		habitat:"Canopy forests",
 		location:"Central West Africa",	
 		branch:"Old World",
-		image:"images/potto.jpg"
+		image:"images/potto.jpg",
+		monkey:"false"
 	}
 
 

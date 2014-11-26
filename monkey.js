@@ -1,9 +1,9 @@
 function create_card_listener($card, i) {
 		$('#game').append($card);
 		$card.find('input').on('click', function(){
-			console.log(i-1);
-			console.log(primates[i-1]);
-			console.log($(this).data())
+			var primateNumber = (primates[i]);
+			var buttonValue = ($(this).data())
+			console.log(buttonValue);
 			// console.log()
 		})
 
