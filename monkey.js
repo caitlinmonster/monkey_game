@@ -2,8 +2,23 @@ function create_card_listener($card, i) {
 		$('#game').append($card);
 		$card.find('input').on('click', function(){
 			var primateNumber = (primates[i]);
-			var buttonValue = ($(this).data())
+			var buttonValue = ($(this).data());
+			var monkeyStatus = (primates[i].monkey);
+			
+			//logs the value of the button
 			console.log(buttonValue);
+			//logs the value of the monkey as true or false
+			console.log(monkeyStatus);
+			
+
+			if (buttonValue === monkeyStatus)
+			{
+				alert('That is a Monkey!');
+			} 
+			else (buttonValue !== monkeyStatus)
+			{
+				alert('That is NOT a Monkey!');
+			}
 			// console.log()
 		})
 

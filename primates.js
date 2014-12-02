@@ -25,7 +25,7 @@ var primates = [
 		location:"Central Africa",	
 		branch:"Old World",	
 		image:"images/wolfs_mona_monkey.jpg",
-		monkey:"true"
+		monkey:true
 	},
 	{
 		name:"Proboscis Monkey", 
@@ -38,7 +38,7 @@ var primates = [
 		location:"Borneo",	
 		branch:"Old World",
 		image:"images/proboscis.jpg",
-		monkey:"true"
+		monkey:true
 	},
 	{
 		name:"Barbary Macaque", 
@@ -51,7 +51,7 @@ var primates = [
 		location:"North West Africa",	
 		branch:"Old World",
 		image:"images/barbary.jpg",
-		monkey:"true"
+		monkey:true
 	},
 	{
 		name:"Bonobo",
@@ -64,7 +64,7 @@ var primates = [
 		location:"Central Africa",	
 		branch:"Greater Ape",
 		image:"images/bonobo.jpg",
-		monkey:"false"
+		monkey:false
 	},
 	{
 		name:"Chimpanzee", 
@@ -77,7 +77,7 @@ var primates = [
 		location:"Central Africa",	
 		branch:"Greater Ape",
 		image:"images/chimp.jpg",
-		monkey:"false"
+		monkey:false
 	},
 	{
 		name:"De Brazza's Monkey", 
@@ -90,7 +90,7 @@ var primates = [
 		location:"Central Africa",	
 		branch:"Old World",
 		image:"images/debrazzas.jpg",
-		monkey:"true"
+		monkey:true
 	},
 	{
 		name:"Common Squirrel Monkey",
@@ -103,7 +103,7 @@ var primates = [
 		location:"South America",	
 		branch:"New World",
 		image:"images/common_squrrel_monkey.jpg",
-		monkey:"true"
+		monkey:true
 	},
 	{
 		name:"Spider Monkey", 
@@ -116,7 +116,7 @@ var primates = [
 		location:"South America",	
 		branch:"Old World",
 		image:"images/spider_monkey.jpg",
-		monkey:"true"
+		monkey:true
 	},
 	{
 		name:"Langur Monkey",
@@ -128,7 +128,7 @@ var primates = [
 		location:"South Asia",	
 		branch:"Old World",
 		image:"images/langur.jpg",
-		monkey:"true"
+		monkey:true
 	},
 	{
 		name:"Amazon Monkey", 
@@ -141,7 +141,7 @@ var primates = [
 		location:"Central and South America",	
 		branch:"New World",
 		image:"images/amazon_monkey.jpg",
-		monkey:"true"
+		monkey:true
 	},
 	{
 		name:"Patas Monkey", 
@@ -154,7 +154,7 @@ var primates = [
 		location:"West/East Africa",	
 		branch:"Old World",
 		image:"images/patas.jpg",
-		monkey:"true"
+		monkey:true
 	},
 	{
 		name:"Golden Snubnosed Monkey", 
@@ -167,7 +167,7 @@ var primates = [
 		location:"Central and South West China",	
 		branch:"Old World",
 		image:"images/subnosed_monkey.jpg",
-		monkey:"true"
+		monkey:true
 	},	
 	{
 		name:"Ringtailed Lemur",
@@ -180,7 +180,7 @@ var primates = [
 		location:"Madagascar",	
 		branch:"Old World",
 		image:"images/ringtailed_lemur.jpg",
-		monkey:"false"
+		monkey:false
 	},
 	{
 		name:"Slow Loris", 
@@ -193,7 +193,7 @@ var primates = [
 		location:"South and Southeast Asia",	
 		branch:"Old World",
 		image:"images/slow_loris.jpg",
-		monkey:"false"
+		monkey:false
 	},
 	{
 		name:"Bushbaby", 
@@ -206,7 +206,7 @@ var primates = [
 		location:"East Africa/Sub-Saharan",	
 		branch:"Old World",
 		image:"images/galago.jpg",
-		monkey:"false"
+		monkey:false
 	},
 	{
 		name:"Tarsier", 
@@ -219,7 +219,7 @@ var primates = [
 		location:"South-east Asian islands",	
 		branch:"Old World",
 		image:"images/tarsier.jpg",
-		monkey:"false"
+		monkey:false
 	},
 	{
 		name:"Pygmy Marmoset",
@@ -232,7 +232,7 @@ var primates = [
 		location:"South America",	
 		branch:"New World",
 		image:"images/marmoset.jpg",
-		monkey:"false"
+		monkey:false
 	},
 	{
 		name:"Orangutan", 
@@ -245,7 +245,7 @@ var primates = [
 		location:"Indonesia and Malaysia",	
 		branch:"Old World",
 		image:"images/orangutan.jpg",
-		monkey:"false"
+		monkey:false
 	},
 	{
 		name:"Gorilla", 
@@ -258,7 +258,7 @@ var primates = [
 		location:"Central West African and The Democratic Republic of the Congo",	
 		branch:"Greater Ape",
 		image:"images/gorilla.jpg",
-		monkey:"false"
+		monkey:false
 	},
 	{
 		name:"Gibbon", 
@@ -271,7 +271,7 @@ var primates = [
 		location:"India to Indonesia and China",	
 		branch:"Old World",
 		image:"images/gibbon.jpg",
-		monkey:"false"
+		monkey:false
 	},
 	{
 		name:"Black Cap", 
@@ -284,7 +284,7 @@ var primates = [
 		location:"South America",	
 		branch:"New World",
 		image:"images/blackcap_squirrel_monkey.jpg",
-		monkey:"true"
+		monkey:true
 	},
 	{
 		name:"Potto", 
@@ -297,7 +297,7 @@ var primates = [
 		location:"Central West Africa",	
 		branch:"Old World",
 		image:"images/potto.jpg",
-		monkey:"false"
+		monkey:false
 	}
 
 
