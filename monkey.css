@@ -67,6 +67,12 @@ h1 {
 	float: left;
 }
 
+h2 {
+	font-size: 20px;
+	font-family: 'Patua One', sans-serif;
+	float: left;
+}
+
 nav a {
 	font-size: 20px;
 	margin: 15px;
@@ -118,6 +124,34 @@ nav a:visited {
 	background: #E9A33A;
 	border-radius: 20px;
 	}
+
+.correct {
+	width: 250px;
+	height: 250px;
+	float: left;
+	margin: 25px;
+	background: #6B9B82;
+	border-radius: 20px;
+	position: relative; 
+	top:0px;
+	left:0px;
+	font-size: 24px;
+	text-align: center;
+}	
+
+.wrong {
+	width: 250px;
+	height: 250px;
+	float: left;
+	margin: 25px;
+	background: #E9A33A;
+	border-radius: 20px;
+	position: relative; 
+	top:0px;
+	left:0px;
+	font-size: 24px;
+	text-align: center;
+}
 
 /*BUTTONS*/
 
