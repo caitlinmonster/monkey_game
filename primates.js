@@ -11,7 +11,7 @@ var primates = [
 		location:"South America",	
 		branch:"New World",	
 		image:"images/brown_woolly.jpg",
-		monkey:"true"
+		monkey:true
 	},
 
 	{

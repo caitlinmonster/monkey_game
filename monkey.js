@@ -1,84 +1,159 @@
 
 
 function create_card_listener($card, i) {
-		$('#game').append($card);
-		$card.find('input').on('click', function(){
-			var primateNumber = (primates[i]);
-			var buttonValue = ($(this).data("monkey"));
+	$('#game').append($card);
+	$card.find('input').on('click', function(){
+		var primateNumber = primates[i];
+		var buttonValue = $(this).val();
+		var thisPrimate = primates[i];
+		//var monkeyStatus = (primates[i].monkey);
+	
 		
 
-			//var monkeyValue = buttonValue.get("monkey");
-			var monkeyStatus = (primates[i].monkey);
-			
-			//logs the value of the button
-			console.log(buttonValue);
-			//logs the value of the monkey as true or false
-			console.log(monkeyStatus);
-			
-			var $popUpMonkey = $(
-				'<div class="correct">'+
-				'<p>That is a Monkey!</p>'+
-				'</div>'
-				)
-			var $popUpProsimian = $(
-				'<div class="wrong">'+
-				'<p>That is a Prosimian!</p>'+
-				'</div>'
-				)
-			var $popUpApe = $(
-				'<div class="wrong">'+
-				'<p>That is an Ape!</p>'+
-				'</div>'
-				)
+		var $popUpCorrect = $(
+			'<div class="correct '+
+			thisPrimate.class+
+			'">'+
+			'<h2>Correct!</h2>'+
+			'<br><button class="learn"><br>Learn about '+
+			thisPrimate.name+
+			's</button>'+
+			'</div>'
+			)
 
-			var $popUpCorrect = $(
-				'<div class="correct">'+
-				'<p>Correct!</p>'+
-				'</div>'
-				)
+		var $popUpWrong = $(
+			'<div class="wrong '+
+			thisPrimate.class+
+			'">'+
+			'<h2>Wrong!</h2><br><p><br>Learn about '+
+			thisPrimate.name+
+			's</p>'+
+			'</div>'
+			)
 
-			if (buttonValue === "Monkey")
+
+		
+
+		console.log(thisPrimate);
+		console.log(thisPrimate.monkey);
+		if (buttonValue === "Monkey" )
+		{
+			console.log('Monkey');
+			//$($card).append($popUpCorrect);
+			if (thisPrimate.monkey) 
 			{
-				console.log('That is a Monkey!');
-				$($card).append($popUpCorrect);
-			} 
-			else if (buttonValue === "Prosimian")
-			{
-				console.log('That is NOT a Monkey! Have you never seen a Prosimian before?');
-				$($card).append($popUpProsimian);
-			} 
-			else if (buttonValue === "Ape")
-			{
-				console.log('That is NOT a Monkey! Have you never seen an Ape before?');
-				$($card).append($popUpApe);
+				console.log('Correct, that\'s a monkey');
+				$($card).append($popUpCorrect);	
+			} else {
+				console.log('Wrong, that\'s is not a monkey!');
+				$($card).append($popUpWrong);
 			}
+		
+		} 
+		else 
+		{
+			console.log('Not a Monkey');
+			
+			if (thisPrimate.monkey) 
+			{
+				console.log('Wrong, that\'s is a monkey!');
+				$($card).append($popUpWrong);
+			} else {
+				console.log('Correct, that\'s NOT a monkey');
+				$($card).append($popUpCorrect);				
+			}
+			//$($card).append($popUpWrong);
+			//$('body').append($popUpInfo);
+			//$('body').append($shadow);
+		} 
+		var button = $card.find('.learn');
+		learn_more(button, thisPrimate)
+		
 
-		})
+	})
 
-	}
+}
 
 	
+	
+
+
+function learn_more(button, thisPrimate) {
+
+	button.on('click', function() {
+		
+		var $shadow = $(
+			'<div class="tint">'+
+			'</div>'
+			)
+
+		var $popUpInfo = $(
+			'<div class="info">'+
+			'<div class="thumbnail '+
+			thisPrimate.class+
+			'">'+
+			'</div>'+
+			'<p>'+
+			'<h2>'+
+			thisPrimate.type+
+			'</h2>'+
+			'<ul>'+
+			'<li><strong>Common Name:</strong> '+
+			thisPrimate.name+
+			'</li>'+
+			'<li><strong>Primate Type:</strong> '+
+			thisPrimate.type+ 
+			'</li>'+
+			'<li><strong>Species:</strong> '+
+			thisPrimate.species+
+			'</li>'+
+			'<li><strong>Common Name:</strong> '+
+			thisPrimate.status+
+			'</li>'+
+			'<li><strong>Diet:</strong> '+
+			thisPrimate.diet+	
+			'</li>'+
+			'<li><strong>Habitat:</strong> '+
+			thisPrimate.habitat+
+			'</li>'+
+			'<li><strong>Location:</strong> '+
+			thisPrimate.location+	
+			'</li>'+
+			'<li><strong>Branch:</strong> '+
+			thisPrimate.branch+
+			'</li>'+
+			'</ul>'+
+			'</p>'+
+			'</div>'
+		)
+		
+		$('body').append($popUpInfo);
+		console.log("WOOT");
+		$('body').append($shadow);
+
+	})
+}
 
 	$(document).ready(function() {
 		
 		//array shuffle
 		function shuffle(primates) {
-	  	var currentIndex = primates.length, temporaryValue, randomIndex ;
+		  	var currentIndex = primates.length, temporaryValue, randomIndex ;
 
-	  	// While there remain elements to shuffle...
-	  	while (0 !== currentIndex) {
+		  	// While there remain elements to shuffle...
+		  	while (0 !== currentIndex) {
 
-	    // Pick a remaining element...
-	    randomIndex = Math.floor(Math.random() * currentIndex);
-	    currentIndex -= 1;
+			    // Pick a remaining element...
+			    randomIndex = Math.floor(Math.random() * currentIndex);
+			    currentIndex -= 1;
 
-	    // And swap it with the current element.
-	    temporaryValue = primates[currentIndex];
-	    primates[currentIndex] = primates[randomIndex];
-	    primates[randomIndex] = temporaryValue;
-	  }
+			    // And swap it with the current element.
+			    temporaryValue = primates[currentIndex];
+			    primates[currentIndex] = primates[randomIndex];
+			    primates[randomIndex] = temporaryValue;
+		 	}
 
-  		return primates;
+  			return primates;
 		}
 
 		
@@ -124,9 +199,9 @@ function create_card_listener($card, i) {
 						"</div>"+
 						"</div>")
 
-
 			    //add card to page
 			    create_card_listener($card, i)
+			    
 			} 
 
 		});

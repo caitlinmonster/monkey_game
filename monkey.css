@@ -52,11 +52,25 @@ nav {
 }
 
 .info {
-	width: 50%;
-	height: 400px;
+	width: 600px;
+	height: 500px;
 	margin: 40px 25px;
 	background: #E9A33A;
 	border-radius: 20px;
+	margin: auto;
+	position: relative;
+	padding: 25px;
+}
+
+.tint {
+	background: #000;
+	min-width: 100%;
+	min-height: 100%;
+	margin: 0px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
 }
 
 /* TEXT */
@@ -70,7 +84,26 @@ h1 {
 h2 {
 	font-size: 20px;
 	font-family: 'Patua One', sans-serif;
-	float: left;
+	top:0px;
+	left:0px;
+	font-size: 24px;
+	text-align: center;
+	position: relative;
+}
+
+.wrong p {
+	font-weight: 500;
+	color: #E9A33A;
+}
+
+.wrong h2 {
+	font-weight: 700;
+	color: #E9A33A;
+}
+
+strong {
+	font-weight: 700;
+	text-transform: uppercase;
 }
 
 nav a {
@@ -92,6 +125,15 @@ nav a:hover {
 
 nav a:visited {
 	color: 52360D;
+}
+
+.info ul {
+	position: absolute;
+	margin-left: 275px;
+}
+
+.info h2 {
+	position: absolute;
 }
 
 /* CONTENT */
@@ -151,6 +193,15 @@ nav a:visited {
 	left:0px;
 	font-size: 24px;
 	text-align: center;
+}
+
+.thumbnail {
+	width: 250px;
+	height: 250px;
+	float: left;
+	background: #E9A33A;
+	border-radius: 20px;
+	position: absolute;
 }
 
 /*BUTTONS*/
