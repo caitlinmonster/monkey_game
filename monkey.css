@@ -25,6 +25,7 @@ nav {
 	width: 90%;
 	margin: 0px auto;
 	max-width: 1570px;
+	height: 100%;
 }
 
 #game {
@@ -57,22 +58,28 @@ nav {
 	margin: 40px 25px;
 	background: #E9A33A;
 	border-radius: 20px;
-	margin: auto;
-	position: relative;
+	position: fixed;
 	padding: 25px;
 	z-index: 2;
+	right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
 }
 
 .tint {
-	background: #000;
+	clear: both;
+	background-color: rgba(0,0,0,0.5);
 	width: 100%;
-	height: 100%;
+	height: 100vmax;
 	margin: 0px;
 	position: absolute;
 	top: 0;
 	left: 0;
 	z-index: 1;
-	opacity: 0.5;
+	padding: 200px;
+
 }
 
 /* TEXT */
@@ -262,6 +269,11 @@ nav a:visited {
 	opacity: 0.8;
 }
 
+.learn:hover {
+	background-color: #5ea41a;
+	cursor: pointer;
+}
+
 .monkey {
 	top: 80px;
 	left: 50px;
@@ -269,6 +281,7 @@ nav a:visited {
 
 .button:hover {
 	background-color: #5ea41a;
+	cursor: pointer;
 }
 
 .not_a_monkey {

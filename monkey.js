@@ -7,8 +7,6 @@ function create_card_listener($card, i) {
 		var buttonValue = $(this).val();
 		var thisPrimate = primates[i];
 		//var monkeyStatus = (primates[i].monkey);
-	
-		
 
 		var $popUpCorrect = $(
 			'<div class="correct answer '+
@@ -69,6 +67,7 @@ function create_card_listener($card, i) {
 		var button = $card.find('.learn');
 		learn_more(button, thisPrimate)
 
+
 	
 		
 
@@ -76,18 +75,13 @@ function create_card_listener($card, i) {
 
 }
 
-
 function learn_more(button, thisPrimate) {
 
 	button.on('click', function() {
-		
-		var $shadow = $(
-			'<div id="popUp" class="tint">'+
-			'</div>'
-			)
 
 		var $popUpInfo = $(
-			'<div id="popUp" class="info">'+
+			'<div id="popUp" class="tint">'+
+			'<div class="info">'+
 			'<div class="thumbnail '+
 			thisPrimate.class+
 			'">'+
@@ -120,12 +114,13 @@ function learn_more(button, thisPrimate) {
 			'</li>'+
 			'</ul>'+
 			'</p>'+
+			'</div>'+
 			'</div>'
 		)
 		
 		$('body').append($popUpInfo);
-		$('body').append($shadow);
-		close_info($popUpInfo, $shadow)
+		//$('body').append($shadow);
+		close_info($popUpInfo)
 
 
 	})
@@ -135,89 +130,86 @@ function close_info() {
 
 	$('.tint').on('click', function() {
 		document.body.removeChild(document.getElementById('popUp'));
-		console.log("WOOT");
-
-
 	})
 }
 
 
-	$(document).ready(function() {
+$(document).ready(function() {
+	
+	//array shuffle
+	function shuffle(primates) {
+	  	var currentIndex = primates.length, temporaryValue, randomIndex ;
+
+	  	// While there remain elements to shuffle...
+	  	while (0 !== currentIndex) {
+
+		    // Pick a remaining element...
+		    randomIndex = Math.floor(Math.random() * currentIndex);
+		    currentIndex -= 1;
+
+		    // And swap it with the current element.
+		    temporaryValue = primates[currentIndex];
+		    primates[currentIndex] = primates[randomIndex];
+		    primates[randomIndex] = temporaryValue;
+	 	}
+
+			return primates;
+	}
+
+	
 		
-		//array shuffle
-		function shuffle(primates) {
-		  	var currentIndex = primates.length, temporaryValue, randomIndex ;
 
-		  	// While there remain elements to shuffle...
-		  	while (0 !== currentIndex) {
+	$(function() {
 
-			    // Pick a remaining element...
-			    randomIndex = Math.floor(Math.random() * currentIndex);
-			    currentIndex -= 1;
 
-			    // And swap it with the current element.
-			    temporaryValue = primates[currentIndex];
-			    primates[currentIndex] = primates[randomIndex];
-			    primates[randomIndex] = temporaryValue;
-		 	}
+		//run array shuffle
+		shuffle(primates);
+		console.log(primates);
 
-  			return primates;
-		}
-
+		//create loop to pull from array for cards
+	    for (var i = 0; i < primates.length; i++) {
 		
-			
+		    //create a card from array for game
+		    var $card = $(					
+	    		"<div class='flip-container "+
+				primates[i].type+
+				"' "+ 
+				"ontouchstart='this.classList.toggle"+
+				"('hover');'>"+
+				"<div class='flipper'>"+
+				"<div class='front'>"+
+				"<div class='card_front "+
+				primates[i].class+
+				"'></div>"+
+				"</div>"+
+				"<div class='back'>"+
+				"<div class='card_back'>"+
+				"<div class='"+
+				primates[i].class+ 
+				" reverse'>"+
+				"<div class='opacity'></div>"+
+				"</div>"+ 
+				"<input type='button' class='button monkey' value='Monkey' data-monkey="+
+				(primates[i].type)+
+				">"+
+				"<input type='button' class='button not_a_monkey' value='Not a Monkey' data-monkey="+
+				(primates[i].type)+
+				">"+
+				"</div>"+
+				"</div>"+
+				"</div>"+
+				"</div>")
 
-		$(function() {
-
-
-			//run array shuffle
-			shuffle(primates);
-			console.log(primates);
-
-			//create loop to pull from array for cards
-		    for (var i = 0; i < primates.length; i++) {
-			
-			    //create a card from array for game
-			    var $card = $(					
-			    		"<div class='flip-container "+
-						primates[i].type+
-						"' "+ 
-						"ontouchstart='this.classList.toggle"+
-						"('hover');'>"+
-						"<div class='flipper'>"+
-						"<div class='front'>"+
-						"<div class='card_front "+
-						primates[i].class+
-						"'></div>"+
-						"</div>"+
-						"<div class='back'>"+
-						"<div class='card_back'>"+
-						"<div class='"+
-						primates[i].class+ 
-						" reverse'>"+
-						"<div class='opacity'></div>"+
-						"</div>"+ 
-						"<input type='button' class='button monkey' value='Monkey' data-monkey="+
-						(primates[i].type)+
-						">"+
-						"<input type='button' class='button not_a_monkey' value='Not a Monkey' data-monkey="+
-						(primates[i].type)+
-						">"+
-						"</div>"+
-						"</div>"+
-						"</div>"+
-						"</div>")
-
-			    //add card to page
-			    create_card_listener($card, i)
+		    //add card to page
+		    create_card_listener($card, i)
 
 
-			    
-			} 
+		    
+		} 
 
-		});
-			
-	});    
+	});
+		
+});    
 
 
 
