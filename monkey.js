@@ -1,4 +1,16 @@
+function close_info() {
 
+	$('body').on('click', function() {
+		$('body').find('.tint');
+		document.getElementsByClassName('.tint').remove();
+		//$('body').removeChild('.tint');
+		
+		//$('body').append($popUpInfo);
+		console.log("WOOT");
+		//$('body').append($shadow);
+
+	})
+}
 
 function create_card_listener($card, i) {
 	$('#game').append($card);
@@ -11,23 +23,23 @@ function create_card_listener($card, i) {
 		
 
 		var $popUpCorrect = $(
-			'<div class="correct '+
+			'<div class="correct answer '+
 			thisPrimate.class+
 			'">'+
 			'<h2>Correct!</h2>'+
-			'<br><button class="learn"><br>Learn about '+
+			'<button class="learn">Learn about '+
 			thisPrimate.name+
 			's</button>'+
 			'</div>'
 			)
 
 		var $popUpWrong = $(
-			'<div class="wrong '+
+			'<div class="wrong answer '+
 			thisPrimate.class+
 			'">'+
-			'<h2>Wrong!</h2><br><p><br>Learn about '+
+			'<h2>Wrong!</h2><button class="learn">Learn about '+
 			thisPrimate.name+
-			's</p>'+
+			's</button>'+
 			'</div>'
 			)
 
@@ -68,13 +80,13 @@ function create_card_listener($card, i) {
 		} 
 		var button = $card.find('.learn');
 		learn_more(button, thisPrimate)
+		close_info()
 		
 
 	})
 
 }
 
-	
 	
 
 
@@ -95,31 +107,28 @@ function learn_more(button, thisPrimate) {
 			'</div>'+
 			'<p>'+
 			'<h2>'+
-			thisPrimate.type+
+			thisPrimate.name+
 			'</h2>'+
 			'<ul>'+
-			'<li><strong>Common Name:</strong> '+
-			thisPrimate.name+
-			'</li>'+
 			'<li><strong>Primate Type:</strong> '+
 			thisPrimate.type+ 
 			'</li>'+
-			'<li><strong>Species:</strong> '+
+			'<li><strong>Species </strong> '+
 			thisPrimate.species+
 			'</li>'+
-			'<li><strong>Common Name:</strong> '+
+			'<li><strong>Conservation Status </strong> '+
 			thisPrimate.status+
 			'</li>'+
-			'<li><strong>Diet:</strong> '+
+			'<li><strong>Diet </strong> '+
 			thisPrimate.diet+	
 			'</li>'+
-			'<li><strong>Habitat:</strong> '+
+			'<li><strong>Habitat </strong> '+
 			thisPrimate.habitat+
 			'</li>'+
-			'<li><strong>Location:</strong> '+
+			'<li><strong>Location </strong> '+
 			thisPrimate.location+	
 			'</li>'+
-			'<li><strong>Branch:</strong> '+
+			'<li><strong>Branch </strong> '+
 			thisPrimate.branch+
 			'</li>'+
 			'</ul>'+
@@ -128,11 +137,12 @@ function learn_more(button, thisPrimate) {
 		)
 		
 		$('body').append($popUpInfo);
-		console.log("WOOT");
 		$('body').append($shadow);
 
 	})
 }
+
+
 
 	$(document).ready(function() {
 		

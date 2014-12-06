@@ -6,7 +6,7 @@
 /* LAYOUT */
 
 body {
-	background-color:#52360D	;
+	background-color: #52360D;
 	font-family: 'Titillium Web', sans-serif;
 	padding: 0px;
 	margin: 0px;
@@ -53,13 +53,14 @@ nav {
 
 .info {
 	width: 600px;
-	height: 500px;
+	height: 300px;
 	margin: 40px 25px;
 	background: #E9A33A;
 	border-radius: 20px;
 	margin: auto;
 	position: relative;
 	padding: 25px;
+	z-index: 2;
 }
 
 .tint {
@@ -71,6 +72,7 @@ nav {
 	top: 0;
 	left: 0;
 	z-index: 1;
+	opacity: 0.5;
 }
 
 /* TEXT */
@@ -99,6 +101,15 @@ h2 {
 .wrong h2 {
 	font-weight: 700;
 	color: #E9A33A;
+	font-size: 50px;
+	text-shadow: 2px 2px #52360D;
+}
+
+.correct h2 {
+	font-weight: 700;
+	color: #6B9B82;
+	font-size: 50px;
+	text-shadow: 2px 2px #52360D;
 }
 
 strong {
@@ -124,16 +135,27 @@ nav a:hover {
 }
 
 nav a:visited {
-	color: 52360D;
+	color: #52360D;
 }
 
 .info ul {
 	position: absolute;
-	margin-left: 275px;
+	margin-left: 240px;
+	margin-top: 30px;
+	list-style: none;
+	width: 300px;
+	font-size: 18px;
+	line-height: 26px;
+	color: #52360D;
 }
 
 .info h2 {
 	position: absolute;
+	font-size: 34px;
+	margin-left: 25px;
+	margin-bottom: 15px;
+	margin-top: 15px;
+	color: #52360D;
 }
 
 /* CONTENT */
@@ -202,6 +224,7 @@ nav a:visited {
 	background: #E9A33A;
 	border-radius: 20px;
 	position: absolute;
+	margin-top: 45px;
 }
 
 /*BUTTONS*/
@@ -220,6 +243,19 @@ nav a:visited {
 	padding: 10px;
 	margin: 20px auto;
 	position: absolute;
+}
+
+.learn {
+	height: 70px;
+	width: 200px;
+	border: 0px;
+	border-radius: 10px;
+	background-color: #E9A33A;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 20px;
+	font-weight: 700;
+	color: #52360D;
+	opacity: 0.8;
 }
 
 .monkey {
