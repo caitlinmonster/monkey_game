@@ -1,16 +1,4 @@
-function close_info() {
 
-	$('body').on('click', function() {
-		$('body').find('.tint');
-		document.getElementsByClassName('.tint').remove();
-		//$('body').removeChild('.tint');
-		
-		//$('body').append($popUpInfo);
-		console.log("WOOT");
-		//$('body').append($shadow);
-
-	})
-}
 
 function create_card_listener($card, i) {
 	$('#game').append($card);
@@ -80,14 +68,13 @@ function create_card_listener($card, i) {
 		} 
 		var button = $card.find('.learn');
 		learn_more(button, thisPrimate)
-		close_info()
+
+	
 		
 
 	})
 
 }
-
-	
 
 
 function learn_more(button, thisPrimate) {
@@ -95,12 +82,12 @@ function learn_more(button, thisPrimate) {
 	button.on('click', function() {
 		
 		var $shadow = $(
-			'<div class="tint">'+
+			'<div id="popUp" class="tint">'+
 			'</div>'
 			)
 
 		var $popUpInfo = $(
-			'<div class="info">'+
+			'<div id="popUp" class="info">'+
 			'<div class="thumbnail '+
 			thisPrimate.class+
 			'">'+
@@ -110,13 +97,13 @@ function learn_more(button, thisPrimate) {
 			thisPrimate.name+
 			'</h2>'+
 			'<ul>'+
-			'<li><strong>Primate Type:</strong> '+
+			'<li><strong>Primate Type</strong> '+
 			thisPrimate.type+ 
 			'</li>'+
 			'<li><strong>Species </strong> '+
 			thisPrimate.species+
 			'</li>'+
-			'<li><strong>Conservation Status </strong> '+
+			'<li><strong>Status </strong> '+
 			thisPrimate.status+
 			'</li>'+
 			'<li><strong>Diet </strong> '+
@@ -138,10 +125,21 @@ function learn_more(button, thisPrimate) {
 		
 		$('body').append($popUpInfo);
 		$('body').append($shadow);
+		close_info($popUpInfo, $shadow)
+
 
 	})
 }
 
+function close_info() {
+
+	$('.tint').on('click', function() {
+		document.body.removeChild(document.getElementById('popUp'));
+		console.log("WOOT");
+
+
+	})
+}
 
 
 	$(document).ready(function() {
@@ -170,6 +168,7 @@ function learn_more(button, thisPrimate) {
 			
 
 		$(function() {
+
 
 			//run array shuffle
 			shuffle(primates);
@@ -211,11 +210,13 @@ function learn_more(button, thisPrimate) {
 
 			    //add card to page
 			    create_card_listener($card, i)
+
+
 			    
 			} 
 
 		});
-
+			
 	});    
 
 

@@ -34,7 +34,7 @@ var primates = [
 		species:"Nasalis larvatus",	
 		status:"Endangered",
 		diet:"Folivore and Frugivore", 	
-		habitat:"Dipterocarp, mangrove and riverine forests. It can also be found in swamp forests",
+		habitat:"Dipterocarp, mangrove and riverine forests.",
 		location:"Borneo",	
 		branch:"Old World",
 		image:"images/proboscis.jpg",
@@ -96,7 +96,7 @@ var primates = [
 		name:"Common Squirrel Monkey",
 		class:"common_squirrel_monkey", 
 		type:"Monkey",	
-		species:"	Saimiri sciureus",	
+		species:"Saimiri sciureus",	
 		status:"Least Concern",
 		diet:"Frugivorous and insectivorous", 	
 		habitat:"Tropical rainforest",
@@ -183,7 +183,7 @@ var primates = [
 		monkey:false
 	},
 	{
-		name:"Slow Loris", 
+		name:"Slow Lori", 
 		class:"slow_loris",
 		type:"Prosimian",	
 		species:"	Lori bengalensis",	
@@ -298,7 +298,32 @@ var primates = [
 		branch:"Old World",
 		image:"images/potto.jpg",
 		monkey:false
-	}
-
+	},
+	{	
+		name:"Travis", 
+		class:"travis",
+		type:"Primate",
+		species:"Homo sapiens",	
+		status:"Least Concern",
+		diet:"Omnivorous", 	
+		habitat:"All habitats",
+		location:"Global",	
+		branch:"Great Ape",
+		image:"images/travis.jpg",
+		monkey:false
+	},
+	{	
+		name:"My Cat", 
+		class:"bside",
+		type:"Cat",
+		species:"Felis catus",	
+		status:"Domesticated",
+		diet:"Carnivorous", 	
+		habitat:"House and some yards",
+		location:"Global",	
+		branch:"Definitely not a primate",
+		image:"images/bside.jpg",
+		monkey:false
+	},
 
 ]
